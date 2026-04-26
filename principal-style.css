@@ -183,6 +183,9 @@ main {
 .card-local{
     height: 600px;
     width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transform-style: preserve-3d;
     transition: transform .8s ease-in-out;
     cursor: pointer;
@@ -260,6 +263,9 @@ main {
 .card-mypime{
     height: 600px;
     width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transform-style: preserve-3d;
     transition: transform .8s ease-in-out;
     cursor: pointer;
@@ -504,7 +510,8 @@ main {
     .menu {
         flex-direction: column; /* Apilar tarjetas */
         height: auto;
-        padding: 1rem;
+        justify-content: center;
+        padding: 0;
         gap: 2rem;
     }
     
