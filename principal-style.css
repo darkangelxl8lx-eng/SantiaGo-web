@@ -37,6 +37,7 @@ nav {
 
 nav ul {
     width: 100%;
+
     justify-content: space-between;
     list-style: none;
     display: flex;
@@ -60,7 +61,7 @@ li h1 {
 }
 
 .barra-busq{
-    width: 800px;
+    width: 600px;
     height: auto;
     display: flex;
     justify-content: right;
@@ -175,7 +176,7 @@ main {
     height: 700px;
     width: 100%;
     margin-top: 2rem;
-    padding: 0 10rem;
+    padding: 0 8rem;
     color: #fdf0d5;
 }
 
