@@ -1,0 +1,643 @@
+@font-face {
+    font-family: 'Merriweather Sans';
+    src: url(/fonts/Merriweather-Sans/MerriweatherSans-Bold.woff);
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Merriweather Sans', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fdf0d5;
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+
+header {
+    color: white;
+    width: 100%;
+}
+
+nav {
+    width: 100%;
+    height: 80px;
+    padding: 1rem 2rem;
+    display: flex; 
+    justify-content: space-between; 
+    background-color: #0001;
+    align-items: center;
+}
+
+nav ul {
+    width: 100%;
+    justify-content: space-between;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+nav li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+li h1 {
+    text-align: center;
+    align-items: center;
+    padding-bottom: 4px;
+    font-size: 40px;
+    color: #003049;
+}
+
+.barra-busq{
+    width: 900px;
+    height: auto;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+li form{
+    width: 300px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+li form input {
+    width: 250px;
+    height: 40px;
+    padding: 8px 12px;
+    background-color: #0002;
+    border-radius: 15px;
+    border: none;
+}
+
+li input[type="text"]::placeholder{
+    color: #003049;
+    opacity: 1;
+    font-size: 15px;
+}
+
+li form button{
+    width: 40px;
+    height: 40px;
+    padding: 8px 8px;
+    background-color: #0002;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+nav img {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.presentacion{
+    width: 100%;
+    height: 600px;
+    margin: 0;
+    padding: 0;
+    background-image: url(/img/fondo-pagina.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+
+.why-choose{
+    width: 100%;
+    height: 450px;
+    background-color: #fdf0d5;
+    padding: 0 10rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: #0001 8px solid; 
+}
+
+.why-choose div{
+    width: 320px;
+    height: 320px;
+    border-radius: 10px;
+    padding: 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.why-choose div img{
+    width: 50px;
+    height: 50px;
+    margin: 1rem;
+}
+
+.why-choose div h2{
+    font-size: 25px;
+    color: #003049;
+}
+
+.why-choose div p{
+    text-align: center;
+    color: #003049;
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 700px;
+    width: 100%;
+    margin-top: 2rem;
+    padding: 0 10rem;
+    color: #fdf0d5;
+}
+
+.card-local{
+    height: 600px;
+    width: 500px;
+    transform-style: preserve-3d;
+    transition: transform .8s ease-in-out;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.card-local:hover{
+    transform: rotateY(180deg);
+}
+
+.opcion1, .opcion1-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+
+.opcion1{
+    height: 600px;
+    width: 500px;
+    background-color: #c1121f;
+    box-shadow: 0 0 25px #780000;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 2rem;
+}
+
+.opcion1 img{
+    height: 100px;
+    width: 100px;
+    margin: auto;
+}
+
+.opcion1 h2 {
+    font-size: 2rem;
+    margin: auto;
+    color: whitesmoke;
+}
+.opcion1 p{
+    text-align: justify;
+    margin: auto;
+    color: whitesmoke;
+}
+
+.opcion1-back{
+    height: 600px;
+    width: 500px;
+    background-color: #c1121f;
+    box-shadow: 0 0 25px #780000;
+    border-radius: 10px;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 2rem;
+}
+
+.opcion1-back a{
+    background-color: #780000;
+    color: #fdf0d5;
+    text-decoration: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.card-mypime{
+    height: 600px;
+    width: 500px;
+    transform-style: preserve-3d;
+    transition: transform .8s ease-in-out;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.card-mypime:hover{
+    transform: rotateY(180deg);
+}
+
+.opcion2, .opcion2-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+
+.opcion2{
+    height: 600px;
+    width: 500px;
+    background-color: #669bbc;
+    box-shadow: 0 0 25px #003049;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 2rem;
+}
+
+.opcion2 img{
+    height: 100px;
+    width: 100px;
+    margin: auto;
+}
+
+.opcion2 h2 {
+    font-size: 2rem;
+    margin: auto;
+    color: whitesmoke;
+}
+.opcion2 p{
+    text-align: justify;
+    margin: auto;
+    color: whitesmoke;
+}
+
+.opcion2-back{
+    height: 600px;
+    width: 500px;
+    background-color: #669bbc;
+    box-shadow: 0 0 25px #003049;
+    transform: rotateY(180deg);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 2rem;
+}
+
+.opcion2-back a{
+    background-color: #003049;
+    color: #fdf0d5;
+    text-decoration: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+
+.contact{
+    width: 100%;
+    height: 300px;
+    background-color: #003049;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 4rem;
+}
+
+.contact img{
+    width: 160px;
+    height: 160px;
+}
+
+.contact div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fdf0d5;
+    text-align: justify;
+    margin: 2rem;
+}
+
+.contact a {
+    color: #fdf0d5;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border: #0006 2px solid;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.contact a:hover {
+    background-color: #669bbc;
+}
+
+/* ========================================
+   MEDIA QUERIES - RESPONSIVE MOBILE
+   ======================================== */
+
+/* Tablet y móviles grandes (≤1024px) */
+@media (max-width: 1024px) {
+    
+    /* Reducir padding lateral en secciones */
+    .why-choose,
+    .menu {
+        padding: 0 2rem;
+    }
+    
+    /* Ajustar tarjetas del menú principal */
+    .card-local,
+    .card-mypime,
+    .opcion1, .opcion1-back,
+    .opcion2, .opcion2-back {
+        width: 45vw; /* Responsive: 45% del viewport */
+        min-width: 280px;
+        height: auto;
+        min-height: 500px;
+    }
+    
+    .opcion1, .opcion2 {
+        padding: 1.5rem;
+    }
+}
+
+/* ========================================
+   MÓVILES (≤768px) - AJUSTES PRINCIPALES
+   ======================================== */
+@media (max-width: 768px) {
+    
+    /* --- HEADER Y NAVEGACIÓN --- */
+    
+    /* Reducir altura del nav */
+    nav {
+        height: auto;
+        padding: 0.8rem 1rem;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        justify-content: center;
+    }
+    
+    /* Logo y título más compactos */
+    nav img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    li h1 {
+        font-size: 1.4rem; /* De 40px a ~22px */
+        text-align: center;
+        width: 100%;
+    }
+    
+    /* Barra de búsqueda: ocupar ancho completo */
+    .barra-busq {
+        width: 100%;
+        justify-content: center;
+        order: 3; /* Moverla abajo en móviles */
+    }
+    
+    li form {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    li form input {
+        width: 75%; /* Más espacio para el botón */
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+    
+    li form button {
+        width: 45px;
+        height: 40px;
+        font-size: 16px; /* Mejor área de toque */
+    }
+    
+    /* --- SECCIÓN HERO (presentacion) --- */
+    
+    .presentacion {
+        height: auto;
+        min-height: 400px;
+        padding: 2rem 1rem;
+        background-position: center top;
+    }
+    
+    /* --- SECCIÓN "WHY CHOOSE" --- */
+    
+    .why-choose {
+        height: auto;
+        flex-direction: column; /* Apilar tarjetas verticalmente */
+        padding: 2rem 1rem;
+        gap: 1.5rem;
+    }
+    
+    .why-choose div {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        min-height: 250px;
+        padding: 1.5rem;
+    }
+    
+    .why-choose div img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .why-choose div h2 {
+        font-size: 1.3rem;
+    }
+    
+    .why-choose div p {
+        font-size: 0.95rem;
+    }
+    
+    /* --- TARJETAS PRINCIPALES (FLIP CARDS) --- */
+    
+    .menu {
+        flex-direction: column; /* Apilar tarjetas */
+        height: auto;
+        padding: 1rem;
+        gap: 2rem;
+    }
+    
+    /* Desactivar efecto 3D en móviles (mejor UX táctil) */
+    .card-local,
+    .card-mypime {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        min-height: 450px;
+        transform: none !important; /* Evitar rotación accidental */
+        transition: none;
+    }
+    
+    .card-local:hover,
+    .card-mypime:hover {
+        transform: none !important;
+    }
+    
+    /* Mostrar siempre el contenido frontal + botón visible */
+    .opcion1, .opcion2 {
+        position: relative;
+        backface-visibility: visible;
+        transform: none !important;
+        height: auto;
+        min-height: 400px;
+        padding: 1.5rem;
+    }
+    
+    .opcion1-back, .opcion2-back {
+        display: none; /* Ocultar reverso en móviles */
+    }
+    
+    /* Ajustar texto e imágenes en tarjetas */
+    .opcion1 img, .opcion2 img {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .opcion1 h2, .opcion2 h2 {
+        font-size: 1.5rem;
+        margin: 1rem 0;
+    }
+    
+    .opcion1 p, .opcion2 p {
+        font-size: 0.95rem;
+        text-align: center; /* Mejor legibilidad en móvil */
+    }
+    
+    /* Botón "Ver Más" más grande para toque */
+    .opcion1-back a,
+    .opcion2-back a {
+        padding: 14px 28px;
+        font-size: 1.1rem;
+        min-height: 44px; /* Área de toque recomendada */
+    }
+    
+    /* --- FOOTER / CONTACTO --- */
+    
+    .contact {
+        flex-direction: column;
+        height: auto;
+        padding: 2rem 1rem;
+        text-align: center;
+        gap: 1.5rem;
+    }
+    
+    .contact img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .contact div {
+        margin: 0;
+        text-align: center;
+    }
+    
+    .contact div p {
+        font-size: 0.95rem;
+    }
+    
+    .contact a {
+        padding: 12px 24px;
+        font-size: 1rem;
+        min-height: 44px;
+    }
+}
+
+/* ========================================
+    MÓVILES PEQUEÑOS (≤480px) - AJUSTES FINOS
+   ======================================== */
+@media (max-width: 480px) {
+    
+    /* Tipografía más compacta */
+    li h1 {
+        font-size: 1.2rem;
+    }
+    
+    .why-choose div h2,
+    .opcion1 h2, .opcion2 h2 {
+        font-size: 1.2rem;
+    }
+    
+    .why-choose div p,
+    .opcion1 p, .opcion2 p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    /* Inputs y botones aún más accesibles */
+    li form input {
+        width: 70%;
+        font-size: 13px;
+        padding: 8px 10px;
+    }
+    
+    li form button {
+        width: 40px;
+        font-size: 14px;
+    }
+    
+    /* Tarjetas más compactas */
+    .card-local,
+    .card-mypime {
+        min-height: 400px;
+    }
+    
+    .opcion1, .opcion2 {
+        padding: 1rem;
+        min-height: 380px;
+    }
+    
+    .opcion1 img, .opcion2 img {
+        width: 70px;
+        height: 70px;
+    }
+}
